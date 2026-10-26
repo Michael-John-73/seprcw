@@ -31,6 +31,20 @@
     selection stability, and decoder pooling. Learned pooling is a tested
     alternative, not an assumed improvement.</p>
   </section>
+  <section><h2>Distinct experimental panels</h2>
+    <ul>
+      <li>Protocol S, 600 test sources: blind search 56.9167% versus raster 0%;
+      H1/H2 passed, while H3 remained inconclusive.</li>
+      <li>Protocol E, 600 test sources: constrained hard decoding recovered
+      1191/1200 crops. Learned reliability recovered 1184/1200, without an
+      additional advantage; original practical-margin verdicts remain withheld.</li>
+      <li>Quality-only validation used 200 sources to fix strengths at 36/16.
+      The insertion-index oracle is a privileged diagnostic on the original
+      panel, not blind recovery or new-source confirmation.</li>
+    </ul>
+    <p>The following 848-source confirmation is separate from those panels.
+    Their measurements and inferential claims must not be pooled.</p>
+  </section>
   <section><h2>Fixed mean-quality confirmation</h2>
     <img src="assets/hq_confirmation.png" alt="H-Q exact recovery and source-paired nominal 95 percent interval">
     <table><thead><tr><th>Method</th><th>Step</th><th>Exact /1696</th><th>ER</th></tr></thead>
@@ -50,6 +64,17 @@
     message assignments, crop boxes, bits, quality records, analysis, and code
     are available in the repository. No public reuse license has yet been
     selected for the authors' original contributions.</p>
+  </section>
+  <section><h2>Release verification</h2>
+    <p>The full public CPU wrapper reproduced all 3392 blind decodes and 1696
+    quality measurements from 848 sources, including predicted bits, phases,
+    crop boxes, coverage, and marked-image hashes. Fourteen regression and
+    release-interface tests passed, including after downloading a fresh clone
+    from GitHub. This confirms the recorded reproduction, not new robustness
+    or false-acceptance claims.</p>
+    <p><a href="https://github.com/Michael-John-73/seprcw/actions/workflows/verify.yml">Automated record verification</a>
+    · <a href="https://github.com/Michael-John-73/seprcw/blob/main/data/reproduction_validation.json">Full CPU reproduction record</a>
+    · <a href="https://github.com/Michael-John-73/seprcw/blob/main/data/tested_environment.json">Wrapper validation environment</a></p>
   </section>
 </main></body>
 </html>
