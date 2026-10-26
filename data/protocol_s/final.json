@@ -1,0 +1,202 @@
+{
+  "status": "INCONCLUSIVE",
+  "hypotheses": {
+    "H1": {
+      "status": "PASS",
+      "gain_ci": {
+        "estimate": 0.5691666666666667,
+        "low": 0.525,
+        "high": 0.6125,
+        "n": 600,
+        "confidence": 0.9833333333333333,
+        "resamples": 10000,
+        "unit": "source_image",
+        "interval": "paired_percentile_bootstrap"
+      },
+      "minimum_gain": 0.05
+    },
+    "H2": {
+      "status": "PASS",
+      "gain_ci": {
+        "estimate": 0.5675,
+        "low": 0.5241666666666667,
+        "high": 0.61,
+        "n": 600,
+        "confidence": 0.9833333333333333,
+        "resamples": 10000,
+        "unit": "source_image",
+        "interval": "paired_percentile_bootstrap"
+      },
+      "minimum_gain": 0.05,
+      "oracle_deficit_ci": {
+        "estimate": 0.0,
+        "low": 0.0,
+        "high": 0.0,
+        "n": 600,
+        "confidence": 0.9833333333333333,
+        "resamples": 10000,
+        "unit": "source_image",
+        "interval": "paired_percentile_bootstrap"
+      },
+      "maximum_oracle_deficit": 0.1
+    },
+    "H3": {
+      "status": "INCONCLUSIVE",
+      "accepted_correct_gain_ci": {
+        "estimate": 0.5691666666666667,
+        "low": 0.525,
+        "high": 0.6125,
+        "n": 600,
+        "confidence": 0.9833333333333333,
+        "resamples": 10000,
+        "unit": "source_image",
+        "interval": "paired_percentile_bootstrap"
+      },
+      "nominal_fpr": 0.01,
+      "imagewise_fpr_ci": {
+        "raster": {
+          "rate": 0.0033333333333333335,
+          "low": 0.0,
+          "high": 0.01285978118122764,
+          "n": 600,
+          "k": 2,
+          "confidence": 0.9833333333333333,
+          "one_sided": true,
+          "unit": "source_image",
+          "interval": "Clopper-Pearson",
+          "failure_lower": 0.00032474080766842217
+        },
+        "tile_fixed": {
+          "rate": 0.0033333333333333335,
+          "low": 0.0,
+          "high": 0.01285978118122764,
+          "n": 600,
+          "k": 2,
+          "confidence": 0.9833333333333333,
+          "one_sided": true,
+          "unit": "source_image",
+          "interval": "Clopper-Pearson",
+          "failure_lower": 0.00032474080766842217
+        },
+        "tile_search": {
+          "rate": 0.01,
+          "low": 0.0,
+          "high": 0.022752248691016462,
+          "n": 600,
+          "k": 6,
+          "confidence": 0.9833333333333333,
+          "one_sided": true,
+          "unit": "source_image",
+          "interval": "Clopper-Pearson",
+          "failure_lower": 0.003346455147948957
+        }
+      },
+      "calibration_feasible": true,
+      "scope": "Pooled source-domain mixture; both raster and tile_search require FPR upper bounds <= alpha"
+    }
+  },
+  "data_status": "REUSED_PREVIOUSLY_EXPLORED_DATA",
+  "independent_external_validation": false,
+  "frozen_lock": {
+    "config_hash": "70fc9cda3a9529fccbbaa5e8640deb90f5f566501c4fc579398eae146a975a07",
+    "manifest_hash": "2584dfd380f4d308cabe35d904f2c5a25f1398efccc50487fba66f45679c146d",
+    "selection_hash": "fb6a93308a637fb751e438df4a9fdf74f8158414160db1eabde31f305ab3a80e",
+    "development_hash": "4c66534cad2a13e1e3514acd5a12a01446f5389b9c794fc871a9230aa544de60",
+    "calibration_hash": "fd3a4ed094d181ccc7ed0ddee0572cdcee5582b410c321d2db2d18ca5f4efd15",
+    "thresholds_hash": "389257825fd32024b681fc03fb958fe511fa046412ccf62e81a8cde8a227c052",
+    "implementation_hash": "ccf730caa87ff22d1460a73a8b42ece3b526df67bbd3a2d01fd32c507ffb43e2",
+    "status": "FINAL_STARTED_SINGLE_USE"
+  },
+  "test_raw_hash": "89bb66726ea16143212021540502edf1ec8f75124905a895cb6ca9c60d6a7b3e",
+  "test_quality_hash": "4679b839e399341909e6f321da7660c88aec5ab9cc232004b98695d0288968c8",
+  "n_test_source_images": 600,
+  "n_rows": 12600,
+  "undecodable_rows": 0,
+  "failures_by_method": {
+    "raster": 0,
+    "tile_fixed": 0,
+    "tile_search": 0,
+    "tile_oracle": 0
+  },
+  "domain_fpr_exploratory": {
+    "raster": {
+      "ai": {
+        "rate": 0.0033333333333333335,
+        "low": 0.0,
+        "high": 0.019987736961080305,
+        "n": 300,
+        "k": 1,
+        "confidence": 0.9833333333333333,
+        "one_sided": true,
+        "unit": "source_image",
+        "interval": "Clopper-Pearson"
+      },
+      "real": {
+        "rate": 0.0033333333333333335,
+        "low": 0.0,
+        "high": 0.019987736961080305,
+        "n": 300,
+        "k": 1,
+        "confidence": 0.9833333333333333,
+        "one_sided": true,
+        "unit": "source_image",
+        "interval": "Clopper-Pearson"
+      }
+    },
+    "tile_fixed": {
+      "ai": {
+        "rate": 0.0033333333333333335,
+        "low": 0.0,
+        "high": 0.019987736961080305,
+        "n": 300,
+        "k": 1,
+        "confidence": 0.9833333333333333,
+        "one_sided": true,
+        "unit": "source_image",
+        "interval": "Clopper-Pearson"
+      },
+      "real": {
+        "rate": 0.0033333333333333335,
+        "low": 0.0,
+        "high": 0.019987736961080305,
+        "n": 300,
+        "k": 1,
+        "confidence": 0.9833333333333333,
+        "one_sided": true,
+        "unit": "source_image",
+        "interval": "Clopper-Pearson"
+      }
+    },
+    "tile_search": {
+      "ai": {
+        "rate": 0.0033333333333333335,
+        "low": 0.0,
+        "high": 0.019987736961080305,
+        "n": 300,
+        "k": 1,
+        "confidence": 0.9833333333333333,
+        "one_sided": true,
+        "unit": "source_image",
+        "interval": "Clopper-Pearson"
+      },
+      "real": {
+        "rate": 0.016666666666666666,
+        "low": 0.0,
+        "high": 0.04055479691476142,
+        "n": 300,
+        "k": 5,
+        "confidence": 0.9833333333333333,
+        "one_sided": true,
+        "unit": "source_image",
+        "interval": "Clopper-Pearson"
+      }
+    }
+  },
+  "inference_notes": [
+    "Paired bootstrap resamples source images, after averaging the fixed primary crop conditions per image.",
+    "Null FPR unit is any accepted condition for a source image, not independent crop rows.",
+    "Oracle is a synchronization upper-bound diagnostic, excluded from deployable FPR claims.",
+    "A nonsignificant or imprecise result is INCONCLUSIVE, not proof of no effect.",
+    "No final result may trigger parameter refinement in this experiment."
+  ]
+}

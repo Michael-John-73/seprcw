@@ -1,0 +1,74 @@
+{
+  "name": "tile-pilot-reused-data-research",
+  "seed": 20261008,
+  "data": {
+    "root": "local-reference/work",
+    "domains": [
+      "real",
+      "ai"
+    ],
+    "index_csvs": {
+      "real": "index_real.csv",
+      "ai": "index_ai.csv"
+    }
+  },
+  "splits": {
+    "development_fit": 200,
+    "development_validation": 200,
+    "calibration": 600,
+    "test": 600
+  },
+  "codec": {
+    "delta": 36.0,
+    "tile_side": 8,
+    "payload_bits": 48,
+    "pilot_count": 16,
+    "pattern_seed": 20261008,
+    "swap_details": true
+  },
+  "training": {
+    "lr": 0.1,
+    "steps": 300,
+    "l2": 0.01
+  },
+  "development": {
+    "max_trials": 3,
+    "delta_candidates": [
+      36.0,
+      48.0,
+      24.0
+    ],
+    "min_mean_psnr": 32.0,
+    "max_psnr_gap_db": 2.0
+  },
+  "hypotheses": {
+    "h1_min_gain": 0.05,
+    "h2_min_gain": 0.05,
+    "oracle_max_gap": 0.1,
+    "alpha": 0.01
+  },
+  "evaluation": {
+    "retained_area": [
+      1.0,
+      0.8,
+      0.5
+    ],
+    "primary_retained_area": [
+      0.8,
+      0.5
+    ],
+    "image_maxside": 0,
+    "bootstrap_reps": 10000,
+    "confidence": 0.9833333333333333,
+    "min_test_sources_for_inference": 100
+  },
+  "notes": [
+    "Preserve prepared image resolution; no resizing after cropping.",
+    "Source data were previously explored. Split discipline does not make this independent external validation or preregistration.",
+    "1600 distinct source identities selected across balanced real/AI domains; remaining sources are unused.",
+    "600 calibration and 600 test images permit useful 1% FPR assessment, but passing remains data-dependent.",
+    "FPR assurance is pooled over the selected source-domain mixture; domain-specific intervals are exploratory.",
+    "All method thresholds use maxima across crop conditions per null source image; crop rows are not independent trials.",
+    "One final evaluation only. A failed or inconclusive final result does not authorize retuning against the test split."
+  ]
+}

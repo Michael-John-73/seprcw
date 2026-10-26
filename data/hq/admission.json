@@ -1,0 +1,22 @@
+{
+  "status": "INPUT_ONLY_AUDIT_PASS",
+  "n_sources": 848,
+  "domains": {
+    "ai": 424,
+    "real": 424
+  },
+  "historical_sources_excluded": 2000,
+  "prior_original_file_names_overlap": 0,
+  "raw_bytes_overlap": 0,
+  "processed_pixels_overlap": 0,
+  "dhash_within_distance4_accepted": 0,
+  "dhash_is_heuristic": true,
+  "input_pool_counts": {
+    "real": 4000,
+    "ai": 1000
+  },
+  "exclusions": 9,
+  "scope": "same-dataset fresh shard; neither original finite-shard resampling nor generator-generalization claim",
+  "outcomes_opened": false,
+  "at": "2026-10-26T13:18:12.005701+00:00"
+}

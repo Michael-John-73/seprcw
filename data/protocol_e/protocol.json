@@ -1,0 +1,21 @@
+{
+  "protocol_id": "A-20261025-calibration600-test600-v2",
+  "user_instruction": "Unify calibration and test at600 actual sources",
+  "frozen_detectors_sha256": "f3ba9a20f6e3cf2d193fd0d3083edefa24e4aad54903c3013d48f7b4cf902c1d",
+  "parent_protocol_lock_sha256": "4200dc07afddad784b160a84dcb5ae0d1cc78339d0d4b7709999cf9f5fcf2057",
+  "source_counts": {
+    "detector_fit": 200,
+    "validation": 200,
+    "calibration": 600,
+    "test": 600
+  },
+  "alpha_cal": 0.002,
+  "calibration_k": 600,
+  "acceptance": "score strictly greater than source-max order threshold",
+  "test_source_assignment_unchanged": true,
+  "test_reselection": false,
+  "previous_test_access_recorded": true,
+  "new_unseen_cohort_claim": false,
+  "retrain_decoder_or_detectors": false,
+  "recompute_full_calibration_and_test": true
+}

@@ -1,0 +1,54 @@
+[
+  {
+    "domain": "real",
+    "path": "local-reference/000000449661.jpg",
+    "reason": "post-preparation minimum side below 144"
+  },
+  {
+    "domain": "real",
+    "path": "local-reference/000000298251.jpg",
+    "reason": "post-preparation minimum side below 144"
+  },
+  {
+    "domain": "ai",
+    "path": "local-reference/68350a83-7bc4-4c80-9b32-d041a526e60a.png",
+    "reason": "dhash_near_duplicate",
+    "near_match": "new:114d8a8e170b51b4ffd93464"
+  },
+  {
+    "domain": "ai",
+    "path": "local-reference/6c59a456-4567-44b4-8c7c-08c62db5e71c.png",
+    "reason": "duplicate_processed_pixels",
+    "near_match": "new:60461037b31b5a5e91b56af9"
+  },
+  {
+    "domain": "ai",
+    "path": "local-reference/59f40132-71fe-4621-ba9c-6a4d6c90d2f0.png",
+    "reason": "dhash_near_duplicate",
+    "near_match": "new:91d3262d920d9f8167b53593"
+  },
+  {
+    "domain": "ai",
+    "path": "local-reference/9e0c850d-14ab-445a-8ae4-6cd1da01eed0.png",
+    "reason": "duplicate_processed_pixels",
+    "near_match": "new:4a3017647c06c6ab1f095dbf"
+  },
+  {
+    "domain": "ai",
+    "path": "local-reference/76a42f14-3812-4f85-ae78-4c38ac7e6802.png",
+    "reason": "dhash_near_duplicate",
+    "near_match": "new:1455253e35cfbf64124c3b57"
+  },
+  {
+    "domain": "ai",
+    "path": "local-reference/9fc08c05-be7e-426b-a2e3-b2d9aae1df28.png",
+    "reason": "dhash_near_duplicate",
+    "near_match": "new:b94ba2f90bf92314c403c75a"
+  },
+  {
+    "domain": "ai",
+    "path": "local-reference/fd15f787-9d74-40ca-8a3e-e4408be8b2c2.png",
+    "reason": "duplicate_raw_bytes",
+    "near_match": "new:a82528da7a5690df1432b173"
+  }
+]

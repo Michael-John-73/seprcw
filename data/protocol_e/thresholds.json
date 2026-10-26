@@ -1,0 +1,58 @@
+{
+  "E0D0": {
+    "threshold": -1.4624877570295456,
+    "threshold_kind": "finite",
+    "n": 600,
+    "k": 600,
+    "alpha_cal": 0.002,
+    "event": "source maximum over four crops; one assigned reference"
+  },
+  "E1D0": {
+    "threshold": -0.3807420070228197,
+    "threshold_kind": "finite",
+    "n": 600,
+    "k": 600,
+    "alpha_cal": 0.002,
+    "event": "source maximum over four crops; one assigned reference"
+  },
+  "E2D0": {
+    "threshold": -2.6569533453350673,
+    "threshold_kind": "finite",
+    "n": 600,
+    "k": 600,
+    "alpha_cal": 0.002,
+    "event": "source maximum over four crops; one assigned reference"
+  },
+  "E2D1": {
+    "threshold": -2.7295360226560486,
+    "threshold_kind": "finite",
+    "n": 600,
+    "k": 600,
+    "alpha_cal": 0.002,
+    "event": "source maximum over four crops; one assigned reference"
+  },
+  "E2D2": {
+    "threshold": -2.486174245938346,
+    "threshold_kind": "finite",
+    "n": 600,
+    "k": 600,
+    "alpha_cal": 0.002,
+    "event": "source maximum over four crops; one assigned reference"
+  },
+  "E2D3": {
+    "threshold": -2.315655870615285,
+    "threshold_kind": "finite",
+    "n": 600,
+    "k": 600,
+    "alpha_cal": 0.002,
+    "event": "source maximum over four crops; one assigned reference"
+  },
+  "E2D4": {
+    "threshold": -2.6112973095954413,
+    "threshold_kind": "finite",
+    "n": 600,
+    "k": 600,
+    "alpha_cal": 0.002,
+    "event": "source maximum over four crops; one assigned reference"
+  }
+}

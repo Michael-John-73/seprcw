@@ -1,0 +1,94 @@
+{
+  "study": {
+    "id": "paper_A_stability_reliability_main",
+    "protocol_version": "A-20261022-v4",
+    "mode": "development",
+    "seed": 20261021
+  },
+  "paths": {
+    "dataset_root": "local-reference/paper_A",
+    "run_root": "local-reference/main_v4",
+    "input_csv": "local-reference/source_intake.main.csv"
+  },
+  "codec": {
+    "delta": 36,
+    "eta_candidates": [
+      1,
+      2,
+      4
+    ],
+    "tile_side": 8,
+    "payload_bits": 48,
+    "pilot_count": 16,
+    "pattern_seed": 20261008,
+    "swap_details": true
+  },
+  "data": {
+    "max_side": 512,
+    "min_side": 256,
+    "message_pool_size": 1024,
+    "near_duplicate_distance": 4
+  },
+  "evaluation": {
+    "areas": [
+      1,
+      0.8,
+      0.5,
+      0.25
+    ],
+    "primary_areas": [
+      0.8,
+      0.5
+    ],
+    "bootstrap_reps": 10000,
+    "effect_family_alpha": 0.04,
+    "fpr_family_alpha": 0.01,
+    "alpha_test": 0.01,
+    "alpha_cal": 0.002,
+    "test_n": null,
+    "external_test_n": null,
+    "power_target": 0.9,
+    "assumed_fpr": 0.005,
+    "margin_embed": null,
+    "margin_decode": null,
+    "margin_joint": null,
+    "min_psnr": null,
+    "min_ssim": null,
+    "max_decode_seconds": null,
+    "quality_gap_db": null
+  },
+  "training": {
+    "seeds": [
+      20261021,
+      20261022,
+      20261023
+    ],
+    "epochs": 30,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "micro_batch": 8,
+    "accumulation_steps": 4,
+    "max_observations": 65536,
+    "clip_grad_norm": 1,
+    "device": "cuda",
+    "amp": false,
+    "hist_bins": 64,
+    "hist_smoothing": 1,
+    "max_trials": 3,
+    "early_stop_patience": 5,
+    "affine_l2": 0.0001,
+    "affine_max_iter": 200,
+    "affine_gtol": 1e-07,
+    "affine_ftol": 1e-12
+  },
+  "detector": {
+    "lr": 0.05,
+    "l2": 0.01,
+    "steps": 1000
+  }
+}

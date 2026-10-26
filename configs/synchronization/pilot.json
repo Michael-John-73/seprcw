@@ -1,0 +1,71 @@
+{
+  "name": "tile-pilot-engineering-smoke",
+  "seed": 20261008,
+  "data": {
+    "root": "local-reference/work",
+    "domains": [
+      "real",
+      "ai"
+    ],
+    "index_csvs": {
+      "real": "index_real.csv",
+      "ai": "index_ai.csv"
+    }
+  },
+  "splits": {
+    "development_fit": 4,
+    "development_validation": 4,
+    "calibration": 6,
+    "test": 6
+  },
+  "codec": {
+    "delta": 36.0,
+    "tile_side": 8,
+    "payload_bits": 48,
+    "pilot_count": 16,
+    "pattern_seed": 20261008,
+    "swap_details": true
+  },
+  "training": {
+    "lr": 0.1,
+    "steps": 300,
+    "l2": 0.01
+  },
+  "development": {
+    "max_trials": 3,
+    "delta_candidates": [
+      36.0,
+      48.0,
+      24.0
+    ],
+    "min_mean_psnr": 32.0,
+    "max_psnr_gap_db": 2.0
+  },
+  "hypotheses": {
+    "h1_min_gain": 0.05,
+    "h2_min_gain": 0.05,
+    "oracle_max_gap": 0.1,
+    "alpha": 0.01
+  },
+  "evaluation": {
+    "retained_area": [
+      1.0,
+      0.8,
+      0.5
+    ],
+    "primary_retained_area": [
+      0.8,
+      0.5
+    ],
+    "image_maxside": 384,
+    "bootstrap_reps": 2000,
+    "confidence": 0.9833333333333333,
+    "min_test_sources_for_inference": 100
+  },
+  "notes": [
+    "Previously explored source data; this is engineering validation, not independent external validation or preregistration.",
+    "INTER_AREA downsampling changes images; old full-resolution baseline scores cannot be reused.",
+    "Six calibration images cannot support a nontrivial 1% conformal threshold. H3 must remain INCONCLUSIVE even if development passes.",
+    "Candidate list is finite and fixed. Failures do not relax the hypotheses or quality thresholds."
+  ]
+}

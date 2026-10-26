@@ -1,0 +1,240 @@
+{
+  "E0D0": {
+    "weights": [
+      1.44520208539123,
+      1.4684896417635134,
+      0.0,
+      1.4415737708303893,
+      0.791872847171549
+    ],
+    "mean": [
+      0.34417317012402693,
+      0.08685774289753376,
+      1.0,
+      0.3019956188291289
+    ],
+    "std": [
+      0.29015689594837807,
+      0.09694373193655362,
+      1e-06,
+      0.34052280943716445
+    ],
+    "n_rows": 1600,
+    "source_count": 200,
+    "training_role": "detector_fit",
+    "parameters": {
+      "lr": 0.05,
+      "l2": 0.01,
+      "steps": 1000
+    },
+    "optimizer": "full-batch gradient descent",
+    "source_roles_sha256": "26510e23e4b00c548133f1c7dc35dc0922a31506db1ed9c4e0477692b8de6048",
+    "fit_rows_sha256": "7fe91d0390038dc0fff8591d4ccc7fa4fc359a0080005c739df900c9452eae4b",
+    "checkpoint_sha256": "f2b8cfd27c0b299cabd01d32bcfbc036d586e08f076e8bf254835149df98b79b",
+    "compute_device": "cuda"
+  },
+  "E1D0": {
+    "weights": [
+      1.608294510264067,
+      1.1026723931641087,
+      0.0,
+      0.8624405316805127,
+      0.7687517158080114
+    ],
+    "mean": [
+      0.29968830154134424,
+      0.08668108720376594,
+      1.0,
+      0.2386224445876441
+    ],
+    "std": [
+      0.2354125166222925,
+      0.09830388992260454,
+      1e-06,
+      0.28149791809202857
+    ],
+    "n_rows": 1600,
+    "source_count": 200,
+    "training_role": "detector_fit",
+    "parameters": {
+      "lr": 0.05,
+      "l2": 0.01,
+      "steps": 1000
+    },
+    "optimizer": "full-batch gradient descent",
+    "source_roles_sha256": "26510e23e4b00c548133f1c7dc35dc0922a31506db1ed9c4e0477692b8de6048",
+    "fit_rows_sha256": "7fe91d0390038dc0fff8591d4ccc7fa4fc359a0080005c739df900c9452eae4b",
+    "checkpoint_sha256": "f2b8cfd27c0b299cabd01d32bcfbc036d586e08f076e8bf254835149df98b79b",
+    "compute_device": "cuda"
+  },
+  "E2D0": {
+    "weights": [
+      1.52500035738285,
+      1.152639114557013,
+      0.0,
+      1.549939398303597,
+      0.22603597807276818
+    ],
+    "mean": [
+      0.5142304713790371,
+      0.13752320227118642,
+      1.0,
+      0.4786791894383622
+    ],
+    "std": [
+      0.43241606728374,
+      0.14727938000812527,
+      1e-06,
+      0.4858330929680568
+    ],
+    "n_rows": 1600,
+    "source_count": 200,
+    "training_role": "detector_fit",
+    "parameters": {
+      "lr": 0.05,
+      "l2": 0.01,
+      "steps": 1000
+    },
+    "optimizer": "full-batch gradient descent",
+    "source_roles_sha256": "26510e23e4b00c548133f1c7dc35dc0922a31506db1ed9c4e0477692b8de6048",
+    "fit_rows_sha256": "7fe91d0390038dc0fff8591d4ccc7fa4fc359a0080005c739df900c9452eae4b",
+    "checkpoint_sha256": "f2b8cfd27c0b299cabd01d32bcfbc036d586e08f076e8bf254835149df98b79b",
+    "compute_device": "cuda"
+  },
+  "E2D1": {
+    "weights": [
+      1.5244296308583223,
+      1.14955880639709,
+      0.0,
+      1.5457405452017317,
+      0.2323090140833421
+    ],
+    "mean": [
+      0.5142304713790371,
+      0.13752320227118642,
+      1.0,
+      0.46957974727057294
+    ],
+    "std": [
+      0.43241606728374,
+      0.14727938000812527,
+      1e-06,
+      0.47658820700538745
+    ],
+    "n_rows": 1600,
+    "source_count": 200,
+    "training_role": "detector_fit",
+    "parameters": {
+      "lr": 0.05,
+      "l2": 0.01,
+      "steps": 1000
+    },
+    "optimizer": "full-batch gradient descent",
+    "source_roles_sha256": "26510e23e4b00c548133f1c7dc35dc0922a31506db1ed9c4e0477692b8de6048",
+    "fit_rows_sha256": "7fe91d0390038dc0fff8591d4ccc7fa4fc359a0080005c739df900c9452eae4b",
+    "checkpoint_sha256": "f2b8cfd27c0b299cabd01d32bcfbc036d586e08f076e8bf254835149df98b79b",
+    "compute_device": "cuda"
+  },
+  "E2D2": {
+    "weights": [
+      1.5300740837669777,
+      1.1535242508671548,
+      0.0,
+      1.5948265461061482,
+      0.11415349140826431
+    ],
+    "mean": [
+      0.5142304713790371,
+      0.13752320227118642,
+      1.0,
+      0.5034146595378153
+    ],
+    "std": [
+      0.43241606728374,
+      0.14727938000812527,
+      1e-06,
+      0.5053158258038077
+    ],
+    "n_rows": 1600,
+    "source_count": 200,
+    "training_role": "detector_fit",
+    "parameters": {
+      "lr": 0.05,
+      "l2": 0.01,
+      "steps": 1000
+    },
+    "optimizer": "full-batch gradient descent",
+    "source_roles_sha256": "26510e23e4b00c548133f1c7dc35dc0922a31506db1ed9c4e0477692b8de6048",
+    "fit_rows_sha256": "7fe91d0390038dc0fff8591d4ccc7fa4fc359a0080005c739df900c9452eae4b",
+    "checkpoint_sha256": "f2b8cfd27c0b299cabd01d32bcfbc036d586e08f076e8bf254835149df98b79b",
+    "compute_device": "cuda"
+  },
+  "E2D3": {
+    "weights": [
+      1.5186237127434086,
+      1.1447096236034469,
+      0.0,
+      1.605404830757747,
+      0.11989194504027899
+    ],
+    "mean": [
+      0.5142304713790371,
+      0.13752320227118642,
+      1.0,
+      0.47560592813154434
+    ],
+    "std": [
+      0.43241606728374,
+      0.14727938000812527,
+      1e-06,
+      0.4824677248827667
+    ],
+    "n_rows": 1600,
+    "source_count": 200,
+    "training_role": "detector_fit",
+    "parameters": {
+      "lr": 0.05,
+      "l2": 0.01,
+      "steps": 1000
+    },
+    "optimizer": "full-batch gradient descent",
+    "source_roles_sha256": "26510e23e4b00c548133f1c7dc35dc0922a31506db1ed9c4e0477692b8de6048",
+    "fit_rows_sha256": "7fe91d0390038dc0fff8591d4ccc7fa4fc359a0080005c739df900c9452eae4b",
+    "checkpoint_sha256": "f2b8cfd27c0b299cabd01d32bcfbc036d586e08f076e8bf254835149df98b79b",
+    "compute_device": "cuda"
+  },
+  "E2D4": {
+    "weights": [
+      1.5154539575483112,
+      1.1402784146651437,
+      0.0,
+      1.5924535589465851,
+      0.13587260190094552
+    ],
+    "mean": [
+      0.5142304713790371,
+      0.13752320227118642,
+      1.0,
+      0.4985788002992739
+    ],
+    "std": [
+      0.43241606728374,
+      0.14727938000812527,
+      1e-06,
+      0.5051534443189405
+    ],
+    "n_rows": 1600,
+    "source_count": 200,
+    "training_role": "detector_fit",
+    "parameters": {
+      "lr": 0.05,
+      "l2": 0.01,
+      "steps": 1000
+    },
+    "optimizer": "full-batch gradient descent",
+    "source_roles_sha256": "26510e23e4b00c548133f1c7dc35dc0922a31506db1ed9c4e0477692b8de6048",
+    "fit_rows_sha256": "7fe91d0390038dc0fff8591d4ccc7fa4fc359a0080005c739df900c9452eae4b",
+    "checkpoint_sha256": "f2b8cfd27c0b299cabd01d32bcfbc036d586e08f076e8bf254835149df98b79b",
+    "compute_device": "cuda"
+  }
+}

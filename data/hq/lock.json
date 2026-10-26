@@ -1,0 +1,36 @@
+{
+  "at": "2026-10-26T13:18:14.562024+00:00",
+  "status": "FROZEN_BEFORE_NEW_OUTCOMES",
+  "files": {
+    "design.json": "55ef9ef0d25f27b757aa6f6f9df09676349e603c4055c8035a78ccc1e1a7ef29",
+    "cohort.json": "79376c02a8ad100f306b455af531fb81e9220b57abb9d29475995136953b79c4",
+    "messages.json": "94f993b3d4920ee4d5ff7332f2018fe6b5f9c295c370c7cb1b2f41b0c447e80e",
+    "admission.json": "48c0d4261737fc63f8a521a8ad52175d4922e2583077410fd4ed431d04a33f5d",
+    "historical_exclusion.json": "a8e061f1e3dc05b081ae838e060b560d012f4179c0bc64de1122c9d2ea1c7191",
+    "input_exclusions.json": "232ff640f94a57ef274e09d6601a576e30848cf00f583153a8dfdc118723f2b3",
+    "cpu_reference_equivalence.json": "5d0c9e3355ef9e98877bc7423c430a28d8686e9e9d5136f36e53d11b855b6418"
+  },
+  "engine_hashes": {
+    "__init__.py": "837796125c9ad253fcb8948c1012ae8d286c3140a1b41726ff7dfa94ed86c18e",
+    "affine.py": "e41c6b99dd65655e9ea94289392bcee9b616cf490b3ce5f173ee352db85c9e3d",
+    "audit.py": "a21aa7a9bdda51290e264541034dd4624d6bdf7952a55a5d5dfa2d6e13f10ae7",
+    "codec.py": "1acc164f02490184f1f23cd911cfb13c4b09eb9403d79bf5ce011047be432568",
+    "compute.py": "2415cfa90d587329d8975caa5f9fd6edd9868a619a2ebe04c6047a977886c919",
+    "cuda_codec.py": "40cf0ba4e84403eaf4a7b902cfa03726a721a84b2c6591522bce0ae912a25f14",
+    "cuda_reductions.py": "4c27498e6df034b757e5bbf4ed36e5435829ffe955f187b7a26769f2e41e439a",
+    "cuda_statistics.py": "37702959865d224d2f16e8d6c789406edbbd0571949351a24936321898c9366d",
+    "data.py": "cce911d6bf28bb50a3061f3b16b3e7a8945741328b414bfe169a2c41887c3589",
+    "decisions.py": "b572d783153c1189928d9d93124754414ed7e13f1f6b773c295871e7903d4612",
+    "diagnostics.py": "6f421c2820bcf3e44701be9f63bf8ddddbb2b21556f8d4b9336d80412888e495",
+    "experiment.py": "9ffd3d6ac9103079951dc9087440cf24649dd1d42d528cb236d4dd4007dad340",
+    "io.py": "ceea94d4a94b99aa1b67f475beaf225814f2da701f30d14703d6214b6ae7cb12",
+    "learning.py": "310a68f6c707ceea8f0ce0174a40a230e7854c107b349e3cf3cfaf53434b08ae",
+    "legacy_codec.py": "6a02ce7202bf34377fb8e7a0bd6a5930263c492e1726bcff3d7175377843750d",
+    "numerics.py": "1e882bf586096648f89c952ac12161638291542daec450fd0229045f2a279f4a",
+    "statistics.py": "baa4925ee7135932eb3992296402e75f13cd3c716be8b613e6aa07e3da7e7220"
+  },
+  "runner_hashes": {
+    "hq_independent_cpu.py": "423c45c79a7520be6b10b4d7c772e5ad51bf7a863af34ac544eeacf6447fe941",
+    "hq_cpu_statistics.py": "8bb650aa7f732b036c0c75271b7195e225fe9c296fb9c60b5908c3a19683925d"
+  }
+}

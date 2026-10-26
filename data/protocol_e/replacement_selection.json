@@ -1,0 +1,42 @@
+{
+  "status": "SELECTED_BEFORE_SCORE_COMPUTATION",
+  "addition": {
+    "source_id": "76d5e7b5d0e69b6401520ea0",
+    "source_group": "76d5e7b5d0e69b6401520ea0262ff7db6903ea98c723a256329850efa8082673",
+    "domain": "ai",
+    "dataset": "diffusiondb_part1",
+    "path": "local-reference/calibration_replacement.png",
+    "sha256": "33877687290efbf43f2dc0f305003d5357729a69614a8cda3366834564f5e7b6",
+    "split": "calibration",
+    "historical_split": "replacement_for_calibration_duplicate",
+    "previously_seen": false
+  },
+  "preparation": {
+    "path": "local-reference/03f7daaa-2c20-41b0-9762-68b12e5be62d.png",
+    "source_id": "76d5e7b5d0e69b6401520ea0",
+    "source_group": "76d5e7b5d0e69b6401520ea0262ff7db6903ea98c723a256329850efa8082673",
+    "raw_sha256": "d50a569b06d73bf0d77cd09d50dd511ae6bb3e01c441ed8d7d6ad35f971acb52",
+    "prepared_sha256": "33877687290efbf43f2dc0f305003d5357729a69614a8cda3366834564f5e7b6",
+    "pixel_sha256": "67c95728ba241e8871002845744da5461744305445871d2b919649ee51182400",
+    "min_dhash_distance": 19,
+    "raw_shape": [
+      512,
+      512
+    ],
+    "work_shape": [
+      512,
+      512
+    ],
+    "processed_shape": [
+      512,
+      512
+    ],
+    "upscaled": false
+  },
+  "replaces_excluded_source_id": "3694a6edcda62e430d9ea2ed",
+  "selection_rule": "same AI domain; lexical filename first eligible; no model score or test outcome used",
+  "preparation_rule": "legacy short-side minimum256 INTER_CUBIC if needed; PNG; longest-side512 INTER_AREA; minimum144",
+  "duplicate_screen_against": "all1600 originals plus replacement test image; source filename, bytes, final pixels, dHash<=4",
+  "near_duplicate_screen_is_not_proof": true,
+  "wider_prior_use_not_established": true
+}

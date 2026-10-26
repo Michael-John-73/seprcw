@@ -1,0 +1,99 @@
+{
+  "id": "H_Q_CPU_INDEPENDENT_20261026",
+  "at": "2026-10-26T13:13:45.027703+00:00",
+  "backend": "cpu_only_explicit_confirmation",
+  "user_precision_decision": "95% CI planning halfwidth +/-3pp, 848 sources, 424 per domain",
+  "fixed": {
+    "E1_delta": 36,
+    "E2_delta": 16,
+    "eta": 2.0,
+    "decoder": "D0",
+    "areas": [
+      0.8,
+      0.5
+    ],
+    "payload_bits": 48,
+    "pilots": 16,
+    "tile_side": 8,
+    "pattern_seed": 20261008,
+    "crop_seed": 20261021,
+    "sample_seed": 20261026,
+    "n_sources": 848,
+    "per_domain": 424,
+    "target_halfwidth": 0.03,
+    "bootstrap_reps": 10000,
+    "bootstrap_seed": 20261026,
+    "PSNR_tolerance": 0.25,
+    "SSIM_tolerance": 0.005,
+    "dhash_distance": 4
+  },
+  "planning": {
+    "n_sources": 848,
+    "per_domain": 424,
+    "halfwidth": 0.03,
+    "planning_variance": 0.1982323232323232,
+    "precision_guaranteed": false
+  },
+  "selection_path": "local-reference/quality_selection.json",
+  "selection_sha256": "62dd22240fe2a6d217a0f208e0ad1e6f5eababcd52ca9d1eaccd2062fbf6a0e1",
+  "population": {
+    "real": "COCO val2017, excluding all previously prepared sources",
+    "ai": "DiffusionDB 2M fresh shard part-000002; old shard part-000001 fully excluded",
+    "claim": "same-dataset fresh-source evaluation; not same original finite shard or unseen-generator generalization",
+    "archive_url": "https://huggingface.co/datasets/poloclub/diffusiondb/resolve/527749109c86eda3c82027143e45964e75cbf772/images/part-000002.zip",
+    "archive_sha256": "cc3b691e4e84f86672ef7984d06350ee9dbc17dafd1a7f98dba5caa45ed5e786"
+  },
+  "preparation": {
+    "short_side_below_256": "cubic upscale",
+    "then": "lossless PNG integer pixels",
+    "max_side": 512,
+    "max_side_interpolation": "INTER_AREA",
+    "min_post_side": 144
+  },
+  "inference": "48bit D0, blind search; no reference/crop coordinates passed to decoder",
+  "new_training": false,
+  "new_acceptance_calibration": false,
+  "missing_case_policy": "coverage erasure=ER0; unexpected numerical/I/O errors invalidate run; no silent replacement",
+  "quality_gate": "abs mean PSNR difference<=.25 and abs mean SSIM difference<=.005",
+  "analysis": "single contrast, 10000 domain-stratified source-paired draws; weights .5/.5; nominal two-sided 95%",
+  "degenerate_interval": "bounded Hoeffding fallback on [-1,1], alpha=.05",
+  "data_access": "input-only preparation/duplicate audit before lock; no new embedding/recovery outcomes",
+  "engine_hashes": {
+    "__init__.py": "837796125c9ad253fcb8948c1012ae8d286c3140a1b41726ff7dfa94ed86c18e",
+    "affine.py": "e41c6b99dd65655e9ea94289392bcee9b616cf490b3ce5f173ee352db85c9e3d",
+    "audit.py": "a21aa7a9bdda51290e264541034dd4624d6bdf7952a55a5d5dfa2d6e13f10ae7",
+    "codec.py": "1acc164f02490184f1f23cd911cfb13c4b09eb9403d79bf5ce011047be432568",
+    "compute.py": "2415cfa90d587329d8975caa5f9fd6edd9868a619a2ebe04c6047a977886c919",
+    "cuda_codec.py": "40cf0ba4e84403eaf4a7b902cfa03726a721a84b2c6591522bce0ae912a25f14",
+    "cuda_reductions.py": "4c27498e6df034b757e5bbf4ed36e5435829ffe955f187b7a26769f2e41e439a",
+    "cuda_statistics.py": "37702959865d224d2f16e8d6c789406edbbd0571949351a24936321898c9366d",
+    "data.py": "cce911d6bf28bb50a3061f3b16b3e7a8945741328b414bfe169a2c41887c3589",
+    "decisions.py": "b572d783153c1189928d9d93124754414ed7e13f1f6b773c295871e7903d4612",
+    "diagnostics.py": "6f421c2820bcf3e44701be9f63bf8ddddbb2b21556f8d4b9336d80412888e495",
+    "experiment.py": "9ffd3d6ac9103079951dc9087440cf24649dd1d42d528cb236d4dd4007dad340",
+    "io.py": "ceea94d4a94b99aa1b67f475beaf225814f2da701f30d14703d6214b6ae7cb12",
+    "learning.py": "310a68f6c707ceea8f0ce0174a40a230e7854c107b349e3cf3cfaf53434b08ae",
+    "legacy_codec.py": "6a02ce7202bf34377fb8e7a0bd6a5930263c492e1726bcff3d7175377843750d",
+    "numerics.py": "1e882bf586096648f89c952ac12161638291542daec450fd0229045f2a279f4a",
+    "statistics.py": "baa4925ee7135932eb3992296402e75f13cd3c716be8b613e6aa07e3da7e7220"
+  },
+  "runner_hashes": {
+    "hq_independent_cpu.py": "423c45c79a7520be6b10b4d7c772e5ad51bf7a863af34ac544eeacf6447fe941",
+    "hq_cpu_statistics.py": "8bb650aa7f732b036c0c75271b7195e225fe9c296fb9c60b5908c3a19683925d"
+  },
+  "environment": {
+    "python": "3.13.3",
+    "processor": "Intel64 Family 6 Model 197 Stepping 2, GenuineIntel",
+    "logical_cpu_count": 16,
+    "numpy": "2.4.6",
+    "opencv": "5.0.0",
+    "torch": "2.12.0+cpu",
+    "pywavelets": "1.8.0",
+    "scipy": "1.17.1",
+    "skimage": "0.26.0",
+    "CUDA_VISIBLE_DEVICES": "",
+    "mathematical_backend": "CPU NumPy/PyWavelets/OpenCV; no CUDA dispatch",
+    "inference_threads_per_worker": 1,
+    "gpu_used": false
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "hypothesis": "H-Q",
+  "backend": "cpu",
+  "gpu_used": false,
+  "sources": 848,
+  "source_allocation": {
+    "ai": 424,
+    "real": 424
+  },
+  "quality": {
+    "E1_psnr_mean": 38.97502584042423,
+    "E1_ssim_mean": 0.9732387813692329,
+    "E2_psnr_mean": 39.1028128027865,
+    "E2_ssim_mean": 0.9736451596539341,
+    "psnr_paired_difference": {
+      "mean": 0.12778696236226675,
+      "min": -2.212041939624804,
+      "q05": -0.3718173278392296,
+      "median": 0.12425889334020468,
+      "q95": 0.4857915020947775,
+      "max": 5.546364077878238
+    },
+    "ssim_paired_difference": {
+      "mean": 0.00040637828470104544,
+      "min": -0.01277948277765173,
+      "q05": -0.003849664916893114,
+      "median": 0.0006699599923673527,
+      "q95": 0.003994878471619267,
+      "max": 0.01647448869035495
+    },
+    "psnr_difference_abs": 0.12778696236227205,
+    "ssim_difference_abs": 0.00040637828470113657,
+    "matched": true,
+    "criteria": {
+      "mean_PSNR_absolute_difference_dB": 0.25,
+      "mean_SSIM_absolute_difference": 0.005
+    }
+  },
+  "effect": {
+    "difference": 0.42983490566037735,
+    "low": 0.39976415094339623,
+    "high": 0.45990566037735847,
+    "confidence": 0.95,
+    "draws": 10000,
+    "seed": 20261026,
+    "method": "stratified_source_paired_percentile_bootstrap",
+    "domain_weights": {
+      "ai": 0.5,
+      "real": 0.5
+    },
+    "n_sources": 848,
+    "exact_finite_sample_bootstrap_coverage_claimed": false
+  },
+  "verdict": "SUPPORTED_AT_REGISTERED_QUALITY_POINT",
+  "primary_recovery": {
+    "E1": {
+      "exact": 957,
+      "cases": 1696,
+      "ER": 0.5642688679245284
+    },
+    "E2": {
+      "exact": 1686,
+      "cases": 1696,
+      "ER": 0.9941037735849056
+    }
+  },
+  "by_domain": {
+    "real": {
+      "E1": 0.49410377358490565,
+      "E2": 0.9893867924528302
+    },
+    "ai": {
+      "E1": 0.6344339622641509,
+      "E2": 0.9988207547169812
+    }
+  },
+  "by_area": {
+    "0.8": {
+      "E1": 0.6132075471698113,
+      "E2": 0.9929245283018868
+    },
+    "0.5": {
+      "E1": 0.5153301886792453,
+      "E2": 0.9952830188679245
+    }
+  },
+  "old_S_E_verdicts_changed": false,
+  "new_FA_certification": false,
+  "fresh_shard": "DiffusionDB part-000002",
+  "scope": "registered mean-quality point, same dataset collection; no unseen-generator/all-attack claim",
+  "artifacts": {
+    "lock.json": "23ab4d0e0241931746e8eeeaed2d17e20705a09535d440bf1d77523769787990",
+    "prediction_lock.json": "26200644d68d6744920a43e81fad2570a07ee3e1bb4bc21420a5f11095ac81ca",
+    "recount.json": "fde413ff68b420e4adf5c9cc5b4e780492faecd13f5a7a86e8f594d402a37d60"
+  },
+  "at": "2026-10-26T13:23:51.516997+00:00"
+}

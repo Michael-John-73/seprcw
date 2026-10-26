@@ -1,0 +1,93 @@
+{
+  "name": "tile-pilot-reused-data-research-v1",
+  "seed": 20261008,
+  "data": {
+    "root": "local-reference/work",
+    "domains": [
+      "real",
+      "ai"
+    ],
+    "index_csvs": {
+      "real": "index_real.csv",
+      "ai": "index_ai.csv"
+    }
+  },
+  "splits": {
+    "development_fit": 200,
+    "development_validation": 200,
+    "calibration": 600,
+    "test": 600
+  },
+  "codec": {
+    "delta": 36.0,
+    "tile_side": 8,
+    "payload_bits": 48,
+    "pilot_count": 16,
+    "pattern_seed": 20261008,
+    "swap_details": true
+  },
+  "training": {
+    "lr": 0.1,
+    "steps": 300,
+    "l2": 0.01
+  },
+  "development": {
+    "max_trials": 3,
+    "delta_candidates": [
+      36.0,
+      48.0,
+      24.0
+    ],
+    "min_mean_psnr": 32.0,
+    "max_psnr_gap_db": 2.0
+  },
+  "hypotheses": {
+    "h1_min_gain": 0.05,
+    "h2_min_gain": 0.05,
+    "oracle_max_gap": 0.1,
+    "alpha": 0.01
+  },
+  "evaluation": {
+    "retained_area": [
+      1.0,
+      0.8,
+      0.5
+    ],
+    "primary_retained_area": [
+      0.8,
+      0.5
+    ],
+    "image_maxside": 0,
+    "bootstrap_reps": 10000,
+    "confidence": 0.9833333333333333,
+    "min_test_sources_for_inference": 100,
+    "crop_rule": "icisc_filename_sha256_round"
+  },
+  "payload_source": {
+    "kind": "legacy_xl",
+    "path": "local-reference/payloads.json",
+    "expected_sha256": "260fc248d2db9513e9cd2cb93898fe1688c240bfa77344bd0571975196e12128"
+  },
+  "reuse": {
+    "enabled": true,
+    "manifest": "local-reference/reuse_manifest.csv",
+    "manifest_expected_sha256": "770039b498bf6a844d502950f1fe1bc72bcf973351f480bb278e3fbab828041b",
+    "crop_manifest": "local-reference/crop_manifest.csv",
+    "crop_manifest_expected_sha256": "a94cccfbb2afaad5769114937e1dc55876ce74befa9f5ea1bb0624c3cf5334fa",
+    "allow_embed_cache_delta": [
+      36
+    ],
+    "on_incompatible": "recompute_and_record"
+  },
+  "notes": [
+    "Preserve prepared image resolution; no resizing after cropping.",
+    "Source data were previously explored. Split discipline does not make this independent external validation or preregistration.",
+    "1600 distinct source identities selected across balanced real/AI domains; remaining sources are unused.",
+    "600 calibration and 600 test images permit useful 1% FPR assessment, but passing remains data-dependent.",
+    "FPR assurance is pooled over the selected source-domain mixture; domain-specific intervals are exploratory.",
+    "All method thresholds use maxima across crop conditions per null source image; crop rows are not independent trials.",
+    "One final evaluation only. A failed or inconclusive final result does not authorize retuning against the test split.",
+    "ICISC reuse: the fixed 48-bit XL payload (payload_source), the ICISC crop rule with rounded sizes and filename-hash seeds (evaluation.crop_rule; area 0.5 is a new condition under the same rule) and the legacy delta-36 raster insertions as an insertion cache (reuse) replace the seeded random payload, the runner crop rule and fresh raster insertions. Every detection row is a new decode; legacy none/0.8 results stay historical reference and are never mixed into the H1-H3 raw. The *_expected_sha256 values are declared at P03 and compared with the hashes the runner pins at prepare.",
+    "R04 compared 8 development sources pixel by pixel (delta-36 insertion, crop boxes, crop pixels, stored bits). That is evidence, not proof, of equivalence for all sources; a source whose conditions do not hold is embedded anew and the reason is recorded per row."
+  ]
+}

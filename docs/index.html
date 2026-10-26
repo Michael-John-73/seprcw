@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SEPRCW — Stable Embedding and Pilot-Guided Recovery</title>
+  <style>
+    body{font:17px/1.65 system-ui,sans-serif;color:#192d3b;background:#f5f8fa;margin:0}
+    main{max-width:1000px;margin:auto;padding:48px 24px}
+    h1{line-height:1.2;color:#006699;font-size:2.4rem}
+    h2{color:#006699}section{background:white;padding:24px;margin:24px 0;border-radius:12px}
+    a{color:#006699}nav{display:flex;gap:20px;flex-wrap:wrap}
+    img{max-width:100%;height:auto}table{border-collapse:collapse;width:100%}
+    td,th{padding:10px;border-bottom:1px solid #d3dfe5;text-align:left}
+    code{background:#edf3f6;padding:2px 5px}small{color:#506574}
+  </style>
+</head>
+<body><main>
+  <h1>Stable Embedding and Pilot-Guided Recovery of Cropped Block Watermarks</h1>
+  <p>Hyeong-Gyun Yun · Hye-Young Kim (corresponding author)</p>
+  <p>Research materials being prepared for IEEE Access submission.
+     No acceptance, publication, or DOI is claimed.</p>
+  <nav>
+    <a href="https://github.com/Michael-John-73/seprcw">Code and numerical data</a>
+    <a href="https://github.com/Michael-John-73/seprcw/blob/main/docs/REPRODUCIBILITY.md">Reproducibility</a>
+    <a href="https://github.com/Michael-John-73/seprcw/tree/main/data">Dataset manifests</a>
+  </nav>
+  <section><h2>Research question</h2>
+    <p>After cropping, correct positional alignment does not ensure that the same
+    coefficient is read. We separate pilot-guided correspondence, coefficient
+    selection stability, and decoder pooling. Learned pooling is a tested
+    alternative, not an assumed improvement.</p>
+  </section>
+  <section><h2>Fixed mean-quality confirmation</h2>
+    <img src="assets/hq_confirmation.png" alt="H-Q exact recovery and source-paired nominal 95 percent interval">
+    <table><thead><tr><th>Method</th><th>Step</th><th>Exact /1696</th><th>ER</th></tr></thead>
+      <tbody><tr><td>E1D0</td><td>36</td><td>957</td><td>56.426887%</td></tr>
+      <tr><td>E2D0</td><td>16</td><td>1686</td><td>99.410377%</td></tr></tbody></table>
+    <p>848 previously unused sources (424 photographs / 424 generated images).
+    Difference: 42.983491 percentage points; nominal source-paired 95% interval
+    [39.976415, 45.990566]. Mean PSNR/SSIM gaps: 0.127787 dB / 0.000406378.</p>
+    <small>Same dataset collections, not unseen-generator validation. Mean-quality
+    matching is not perceptual equivalence. No new false-acceptance certification.</small>
+  </section>
+  <section><h2>Reproduce</h2>
+    <p><code>python tools/verify_release.py</code> checks the uploaded records
+    without downloading images. The portable CPU runner acquires official
+    original images, verifies their hashes, and reproduces blind decoding.</p>
+    <p>Original images are not redistributed. Source IDs, raw/prepared hashes,
+    message assignments, crop boxes, bits, quality records, analysis, and code
+    are available in the repository. No public reuse license has yet been
+    selected for the authors' original contributions.</p>
+  </section>
+</main></body>
+</html>

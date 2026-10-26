@@ -1,0 +1,11 @@
+{
+  "at": "2026-10-26T13:21:25.155917+00:00",
+  "rows_sha256": "08bd12674b1ee050b6b6bce593fbe831fce81a4f7bd53dbc66313271d19ff616",
+  "quality_sha256": "2dd014b40a4ef769ccc1f2d54a74a1e869b20a1e8335bca522e06ec6a97ea595",
+  "sources": 848,
+  "rows": 3392,
+  "quality_rows": 1696,
+  "wall_s": 188.87780030001886,
+  "workers": 4,
+  "gpu_used": false
+}

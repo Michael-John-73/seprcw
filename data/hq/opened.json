@@ -1,0 +1,8 @@
+{
+  "status": "OUTCOMES_OPENED",
+  "at": "2026-10-26T13:18:16.074772+00:00",
+  "lock_sha256": "23ab4d0e0241931746e8eeeaed2d17e20705a09535d440bf1d77523769787990",
+  "backend": "cpu",
+  "workers": 4,
+  "no_GPU_fallback": true
+}

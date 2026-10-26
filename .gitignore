@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+outputs/
+datasets/
+*.zip
+*.tar.gz
+*.log
+*.aux
+*.synctex*
+.DS_Store

@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "checks": {
+    "848_balanced_sources": true,
+    "scheduled_3392_rows": true,
+    "scheduled_1696_quality": true,
+    "historical_exclusion_2000": true,
+    "no_prior_raw_byte_overlap": true,
+    "no_prior_processed_pixel_overlap": true,
+    "cohort_unique_raw_and_pixels": true,
+    "frozen_before_opened": true,
+    "opening_refers_to_lock": true,
+    "frozen_input_hashes": true,
+    "old_engine_unchanged": true,
+    "new_runner_unchanged": true,
+    "CPU_only_metadata": true,
+    "no_dhash_distance4_overlap": true,
+    "independent_ER_BER_recount": true,
+    "effect_and_CI_recount": true,
+    "quality_means_recount": true,
+    "joint_quality_effect_verdict": true,
+    "old_final_PDF_unchanged": true
+  },
+  "separate_recount": {
+    "mean": 0.42983490566037735,
+    "interval95": [
+      0.39976415094339623,
+      0.45990566037735847
+    ],
+    "mean_quality": {
+      "E1": {
+        "psnr": 38.97502584042423,
+        "ssim": 0.9732387813692329
+      },
+      "E2": {
+        "psnr": 39.1028128027865,
+        "ssim": 0.9736451596539341
+      }
+    },
+    "PSNR_abs_difference": 0.12778696236227205,
+    "SSIM_abs_difference": 0.00040637828470113657,
+    "dhash_prior_matches": 0,
+    "dhash_internal_matches": 0,
+    "verdict": "SUPPORTED_AT_REGISTERED_QUALITY_POINT"
+  },
+  "old_source_identity_note": "all 2000 previously prepared working sources conservatively excluded; not semantic independence proof",
+  "run": "local-reference/cpu848_20261026_r01",
+  "analysis_sha256": "2a8fd8ddc8f31e396d958219ef6ef3eb80d6d109bb0552d5d395b0fbf0df1f65",
+  "audit_process_note": "The first audit export raised a NumPy boolean JSON serialization TypeError. Export converts checks to builtin bool. No inference, cohort, threshold, bootstrap or scientific verdict was changed or rerun."
+}

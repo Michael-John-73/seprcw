@@ -1,0 +1,13 @@
+{
+  "selection_sha256": "62dd22240fe2a6d217a0f208e0ad1e6f5eababcd52ca9d1eaccd2062fbf6a0e1",
+  "selected": {
+    "delta_E1": 36,
+    "delta_E2": 16,
+    "target_distance": 0.08430938149158607,
+    "normalized_discrepancy": 0.8367245167148871,
+    "psnr_difference_abs": 0.16861876298316503,
+    "ssim_difference_abs": 0.0008112473239111351
+  },
+  "locked_before_validation_ER": true,
+  "independent_evaluation_authorized": false
+}

@@ -1,0 +1,14 @@
+{
+  "target_psnr": 38.494214545354204,
+  "eligible_pairs": 20,
+  "selected": {
+    "delta_E1": 36,
+    "delta_E2": 16,
+    "target_distance": 0.08430938149158607,
+    "normalized_discrepancy": 0.8367245167148871,
+    "psnr_difference_abs": 0.16861876298316503,
+    "ssim_difference_abs": 0.0008112473239111351
+  },
+  "status": "PAIR_SELECTED",
+  "selection_uses_ER": false
+}

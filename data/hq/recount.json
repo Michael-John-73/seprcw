@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "at": "2026-10-26T13:23:49.624598+00:00",
+  "rows": 3392,
+  "sources": 848,
+  "quality_rows": 1696,
+  "quality_matched": true,
+  "prediction_lock_sha256": "26200644d68d6744920a43e81fad2570a07ee3e1bb4bc21420a5f11095ac81ca",
+  "gpu_used": false
+}

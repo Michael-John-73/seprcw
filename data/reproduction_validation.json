@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "sources": 848,
+  "rows": 3392,
+  "scope": "full_fixed_cohort",
+  "blind_bits_phase_quality_match": true
+}
