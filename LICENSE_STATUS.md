@@ -3,7 +3,7 @@
 No license has yet been selected for the authors' original code, manuscript,
 figures, or numerical results. Public access is not a grant of an open-source
 license. Contact the authors before reuse beyond rights provided by applicable
-law. This status is intentional and must not be represented as MIT-licensed.
+law. We have not licensed our original contributions under MIT.
 
 Third-party material retains its own terms. See
 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

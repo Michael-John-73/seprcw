@@ -15,8 +15,8 @@ evidence digest where applicable.
 | `followup` | A's quality selection and validation rows; B's same-alignment oracle rows |
 
 A method/crop row is not an independent source. The H-Q confidence interval
-resamples source pairs within the two 424-source strata. S/E/A/B/H-Q must not
-be combined into a single nominal confidence family.
+resamples source pairs within the two 424-source strata. We analyze
+S/E/A/B/H-Q separately, without claiming a single nominal confidence family.
 
 ## Obtain the exact H-Q images
 
@@ -35,23 +35,23 @@ every selected raw hash, reproduces short-side cubic preparation and max-side
 area resizing, and checks prepared PNG and pixel hashes. It does not choose a
 new split or replace missing sources.
 
-The historical 2000 working sources were excluded before confirmation; nine
-candidate input exclusions were made before recovery outcomes. The selection
-and history records remain in `hq`. Byte/pixel/dHash screening is not proof of
+We excluded the historical 2000 working sources before confirmation and nine
+candidate inputs before observing recovery outcomes. We retain the selection
+and history records in `hq`. Byte/pixel/dHash screening is not proof of
 semantic or prompt-group independence.
 
 ## Portable exports and provenance
 
-Local absolute paths are replaced with relative identifiers. The released files
+We replaced local absolute paths with relative identifiers. The released files
 therefore need not have the same hash as the original sealed JSON. The original
 locks preserve the original hashes, while `release_manifest.json` independently
-authenticates the public exports. Do not claim that an original lock authenticates
+authenticates the public exports. We do not use an original lock to authenticate
 a transformed file byte-for-byte.
 
 The raw image hashes, pixel hashes, source IDs, message assignments, predicted
 bits, quality measurements, and inferential quantities are not changed by this
-path transformation. Source snapshots are copied unchanged and checked against
-the experiment lock. `python tools/verify_release.py` verifies release integrity
+path transformation. We copied source snapshots unchanged and checked them
+against the experiment lock. `python tools/verify_release.py` verifies release integrity
 and recomputes H-Q from the uploaded bits and measurements.
 
 ## Rights and limits

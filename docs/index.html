@@ -37,13 +37,14 @@
       H1/H2 passed, while H3 remained inconclusive.</li>
       <li>Protocol E, 600 test sources: constrained hard decoding recovered
       1191/1200 crops. Learned reliability recovered 1184/1200, without an
-      additional advantage; original practical-margin verdicts remain withheld.</li>
-      <li>Quality-only validation used 200 sources to fix strengths at 36/16.
+      additional advantage. We withhold original formal verdicts because we
+      did not adopt positive practical margins.</li>
+      <li>Using quality-only validation on 200 sources, we fixed strengths at 36/16.
       The insertion-index oracle is a privileged diagnostic on the original
       panel, not blind recovery or new-source confirmation.</li>
     </ul>
-    <p>The following 848-source confirmation is separate from those panels.
-    Their measurements and inferential claims must not be pooled.</p>
+    <p>We analyze the following 848-source confirmation separately from those
+    panels rather than pooling their measurements or inferential claims.</p>
   </section>
   <section><h2>Fixed mean-quality confirmation</h2>
     <img src="assets/hq_confirmation.png" alt="H-Q exact recovery and source-paired nominal 95 percent interval">
@@ -60,13 +61,13 @@
     <p><code>python tools/verify_release.py</code> checks the uploaded records
     without downloading images. The portable CPU runner acquires official
     original images, verifies their hashes, and reproduces blind decoding.</p>
-    <p>Original images are not redistributed. Source IDs, raw/prepared hashes,
-    message assignments, crop boxes, bits, quality records, analysis, and code
-    are available in the repository. No public reuse license has yet been
-    selected for the authors' original contributions.</p>
+    <p>We do not redistribute original images. We release source IDs,
+    raw/prepared hashes, message assignments, crop boxes, bits, quality records,
+    analysis, and code in the repository. We have not selected a public reuse
+    license for our original contributions.</p>
   </section>
   <section><h2>Release verification</h2>
-    <p>The full public CPU wrapper reproduced all 3392 blind decodes and 1696
+    <p>Using the full public CPU wrapper, we reproduced all 3392 blind decodes and 1696
     quality measurements from 848 sources, including predicted bits, phases,
     crop boxes, coverage, and marked-image hashes. Fourteen regression and
     release-interface tests passed, including after downloading a fresh clone

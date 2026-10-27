@@ -27,7 +27,8 @@ the release validation report records installed distribution versions.
 
 Create and activate a new virtual environment, install `requirements.txt`,
 and for image reruns install the CPU PyTorch build shown in the main README.
-Do not install packages globally or overwrite the original sealed experiment.
+We validated the public wrapper in a separate environment and preserved the
+original sealed experiment.
 Figures additionally use Matplotlib. All commands emit START/END and progress.
 
 ## Immutable experimental choices
@@ -55,7 +56,7 @@ crop seed helper, and PNG path are preserved in the frozen source.
 from the official providers as documented in `data/README.md`. The acquisition
 tool selects only those files and errors on missing or mismatched inputs.
 Its downloaded archives and prepared/marked images stay under ignored
-`datasets/` and `outputs/`; they must not be committed.
+`datasets/` and `outputs/`; we exclude them from the public release.
 
 Original machine paths are not operational dependencies. The historical runner
 is preserved for provenance; use the portable `reproduce_hq.py` wrapper for
@@ -66,9 +67,10 @@ the public release manifest refers to portable exports.
 
 The synchronization entry point is `run_sync.py`; the E stage entry point is
 `run_embedding.py`. Their configurations are snapshots, not path-independent
-one-command deployments. Adapt only local input/output locations in a **new**
-run directory before starting a fresh workflow. Do not copy past PASS flags,
-training checkpoints, thresholds, or seals to changed experiments.
+one-command deployments. For a fresh workflow, adapt local input/output
+locations and use a **new** run directory. We preserve past PASS flags,
+training checkpoints, thresholds, and seals as evidence of their original
+experiments, not as evidence for changed experiments.
 
 The original E production path requires a working CUDA PyTorch environment;
 the H-Q CPU entry point does not relax that requirement globally. S/E numerical
@@ -79,10 +81,13 @@ verification of every original GPU training trajectory.
 
 ## Reporting differences
 
-Do not tune steps, sources, thresholds, seeds, or the decoder to force agreement.
+We keep steps, sources, thresholds, seeds, and the decoder fixed when comparing
+the reproduction with the released reference.
 Report the repository commit, Python/package versions, command, source checksums,
 and first differing source/key. Unexpected I/O/numerical errors fail execution;
 they are never silently counted as successful recovery or replaced sources.
 
-H-Q adds no acceptance calibration and no false-acceptance guarantee at its new
-strengths. Original S-H3 stays INCONCLUSIVE and E hypotheses stay WITHHELD.
+We performed no additional acceptance calibration for H-Q and make no
+false-acceptance guarantee at its new strengths. We retain the original S-H3
+INCONCLUSIVE decision and withhold the original E formal verdicts because we
+did not adopt positive practical margins.

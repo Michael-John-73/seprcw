@@ -34,7 +34,7 @@ vendored. IEEE template classes/fonts, the reference article, and author
 photographs are not distributed here.
 
 COCO source images retain the rights of their respective owners; the COCO
-annotation license must not be treated as a blanket image redistribution
-license. DiffusionDB is acquired from the pinned official Hugging Face shard;
+annotation license does not provide blanket image redistribution rights.
+We acquire DiffusionDB from the pinned official Hugging Face shard;
 consult its dataset card for current terms and content warnings. We do not
 redistribute either collection's images or prompts.
