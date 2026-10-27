@@ -92,7 +92,7 @@
     ".github/workflows/verify.yml": "ca57215fa9107a192b29cd0c6e5f819961b8c208600fe29a8080aea755c2c621",
     ".gitignore": "9d1eeed6c2a09824b3d7c44a2aa2bc4d3d3973ef8a31d756fe0108be3a760951",
     "LICENSE_STATUS.md": "592337cb5a9f1bc2059ca3c07608c5e0b7215ebbf319d1d693a7e669d4dfcab1",
-    "README.md": "8f01f79f9897e7dedddb1c55dc0a058d06a9663a384f0c68d24069df19dc4088",
+    "README.md": "d1777b70a99a89fac79fc4bcf7ba92f3265fe9dd51d5180bdd3bd9e24b668481",
     "THIRD_PARTY_NOTICES.md": "b8498e70b696b90cd72902943a93932757e3bda6a500aac413e8d4bff0bf2b64",
     "configs/embedding/runpod.main.json": "3e7b210914c5ee5b018766d2af307b0f75ab061a2a1e8513ee5c5dba53ff659f",
     "configs/embedding/runpod.pilot.json": "4cbf76d78f24bcc6b459470fffb9e5f56a0afa6e78db9cccbe3e1cfc5f218d43",
