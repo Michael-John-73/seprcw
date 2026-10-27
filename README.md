@@ -19,23 +19,14 @@ submission; no acceptance or publication is claimed.
 [Dataset guide](data/README.md) |
 [License status](LICENSE_STATUS.md)
 
-```mermaid
-flowchart LR
-    A["Source image"] --> B["BGR to YUV; Haar and block DCT"]
-    P["Repeated tile: 48 payload bits + 16 pilots"] --> C
-    B --> C["E0 floor / E1 nearest / E2 magnitude-gap insertion"]
-    C --> D["Image reconstruction and storage"]
-    D --> E["Crop without resizing"]
-    E --> F["Blind pilot-guided search over 4096 phases"]
-    F --> G["Payload pooling: D0-D4 controls"]
-    G --> H["Recovered 48-bit message"]
-```
+![Paper Figure 1: integrated embedding and recovery path](docs/assets/paper_figure1.png)
 
-*Figure 1 - We compare insertion rules and decoder controls in Protocol E.
-E2 constrains the selected coefficient's magnitude before reconstruction.
-H-Q compares E1D0 and E2D0 at quality-selected strengths, with a separate blind
-search for each method. The privileged insertion-index oracle is a separate
-diagnostic and is not part of this blind-recovery pipeline.*
+*Paper Figure 1 - The original manuscript flow diagram, extracted without
+redrawing. Panels (a)-(e) show the input tile, selection-stable embedding,
+cropping, pilot-guided alignment, and controlled pooling comparisons.
+The coefficient example and synthetic thumbnails are illustrative, not
+measured E2 outputs. The branches represent comparisons, not successive
+processing or proven D3 superiority.*
 
 ## 1. Protocol
 
@@ -68,6 +59,7 @@ D4 = fitted-affine control.
 | E retained areas | 1.0, 0.8, 0.5, 0.25; primary areas 0.8/0.5 |
 | H-Q sources | 424 photographs and 424 generated images |
 | H-Q strengths | E1 step 36; E2 step 16; D0 decoding |
+| H-Q execution | Original fixed-cohort confirmation on CPU; recorded environment and frozen implementation preserved |
 | H-Q mean-quality rule | Absolute mean PSNR gap <=0.25 dB and SSIM gap <=0.005 |
 | H-Q uncertainty | 10000 source-paired, stratum-preserving bootstrap draws; weights 0.5/0.5; nominal two-sided 95% interval |
 
@@ -79,6 +71,11 @@ interval half-width is a precision target, not the support criterion.
 
 The original Protocol E production workflow uses CUDA for transforms, packed
 phase search, pooling, training, and bootstrap computation.
+
+The GPU setup below applies to Protocol E, not to the existing H-Q experiment.
+We performed the original H-Q confirmation on CPU and retain its code, results,
+and recorded environment unchanged. Its CPU reproduction procedure remains in
+the [reproduction guide](docs/REPRODUCIBILITY.md); we do not relabel it as a GPU run.
 
 | Item | Recorded Protocol E environment |
 |---|---|
@@ -197,11 +194,15 @@ guide retains the separate fixed-cohort H-Q reproduction procedure.
 | B, existing test 600 | E1 oracle max/written index: 728/1196 of 1200 | Same true alignment; not blind recovery |
 | H-Q, new 848 | E1D0 957/1696; E2D0 1686/1696 | Fixed mean-quality point, same dataset collections |
 
-![H-Q blind recovery and source-paired nominal 95% interval](docs/assets/hq_confirmation.png)
+![Paper Figure 3: retained-area sensitivity in Protocol E](docs/assets/paper_figure3.png)
 
-*Figure 2 - We report blind recovery at the fixed mean-quality comparison point
-and the source-paired E2D0-minus-E1D0 contrast. The nominal 95% interval belongs
-to the contrast, not to the individual recovery bars.*
+*Paper Figure 3 - The original manuscript graph, extracted without redrawing.
+Panel (a) compares embedding rules with D0; panel (b) compares pooling controls
+on E2 observations using an expanded, nonzero-baseline vertical axis.
+These are original Protocol E results on 600 sources, not H-Q measurements;
+neither panel shows inferential intervals.*
+
+### Existing H-Q confirmation (CPU)
 
 | H-Q method | Strength | Mean PSNR (dB) | Mean SSIM | Blind exact recovery |
 |---|---|---|---|---|
