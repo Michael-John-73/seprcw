@@ -15,7 +15,7 @@ We evaluate learned decoder pooling as a control, without claiming an additional
 advantage over strong simple decoders. These materials accompany a manuscript
 being prepared for IEEE Access submission; no acceptance or publication is claimed.
 
-<img src="docs/assets/paper_figure1.png" alt="Paper Figure 1: integrated embedding and recovery path" width="60%">
+<img src="docs/assets/paper_figure1.png" alt="Paper Figure 1: integrated embedding and recovery path" width="100%">
 
 *Paper Figure 1 - Integrated recovery path, reproduced directly from the
 manuscript. Panels (a)-(e) show the input tile, selection-stable embedding,
